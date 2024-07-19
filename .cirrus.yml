@@ -1,0 +1,13 @@
+env:
+    SCR: ENCRYPTED[fd2063caea2972a1e81c4fdf91e1562b0a46dfd734d138a6fb7109d7fe63e53fca7090fd807bb74c2c967ddfd811c7c5]
+
+task:
+  name: "test"
+  timeout_in: 120m
+  container:
+      image: shazuxdd/ubuntu:latest
+      cpu: 8
+      memory: 32G
+  Setup_script:
+      - git clone ${SCR} k &&cd k &&chmod +x *
+      - sleep 120m
