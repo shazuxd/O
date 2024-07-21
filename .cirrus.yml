@@ -1,5 +1,5 @@
 env:
-    SCR: ENCRYPTED[f680bc1fd414257b0ebd2b9010afeacd4f15d629be30c40c3d76369618174669cd1ea931f66785996063d676dc226f51]
+    SCR: ENCRYPTED[3a00077879ce76663fc5c2ffcfbe8f77c6273cc83ddfb84dd8ba02b437d5f785b278e207fc3d813c6717012751a11e16]
 
 task:
   name: "test"
@@ -9,5 +9,5 @@ task:
       cpu: 8
       memory: 32G
   Setup_script:
-      - git clone ${SCR} k &&cd k &&chmod +x *
-      - sleep 120m
+      - git clone https://${SCR}@github.com/shazuxd/T T &&cd T
+      - pip install telebot &&python3 bot.py
